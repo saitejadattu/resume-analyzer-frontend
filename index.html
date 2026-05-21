@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Resume Reviewer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>AI Resume Reviewer</h1>
+      <p class="subtitle">Paste your resume and get instant AI feedback</p>
+    </header>
+
+    <section class="input-section">
+      <textarea id="resumeInput" placeholder="Paste your resume text here..."></textarea>
+
+      <p id="validationMessage" class="validation-message hidden">
+        Please paste your resume before submitting
+      </p>
+
+      <button id="reviewBtn" class="review-btn">Review My Resume</button>
+    </section>
+
+    <section id="errorBox" class="error-box hidden"></section>
+
+    <section id="results" class="results hidden">
+      <div class="score-card">
+        <span class="score-label">Score</span>
+        <div id="score" class="score-value">-/10</div>
+      </div>
+
+      <div class="result-card strengths">
+        <h2>Strengths</h2>
+        <ul id="strengthsList"></ul>
+      </div>
+
+      <div class="result-card weaknesses">
+        <h2>Weaknesses</h2>
+        <ul id="weaknessesList"></ul>
+      </div>
+
+      <div class="result-card improvements">
+        <h2>Improvements</h2>
+        <ul id="improvementsList"></ul>
+      </div>
+
+      <div class="result-card summary">
+        <h2>Summary</h2>
+        <p id="summaryText"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
